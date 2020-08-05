@@ -1,0 +1,177 @@
+{
+	"info": {
+		"_postman_id": "05b8faa0-9881-4d9f-b82b-9c4a83ba1ec0",
+		"name": "YoutubeList",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Seleciona videos",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{serverHostAndPort}}/api/videos",
+					"protocol": "http",
+					"host": [
+						"{{serverHostAndPort}}"
+					],
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Criar novo registro de video",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Viagem de fim de ano Urubici, Corvo Branco, Rio do Rastro 2016",
+							"type": "text"
+						},
+						{
+							"key": "video_url",
+							"value": "https://www.youtube.com/watch?v=Wjns54ou8ps",
+							"type": "text"
+						},
+						{
+							"key": "imagem",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{serverHostAndPort}}/api/videos",
+					"protocol": "http",
+					"host": [
+						"{{serverHostAndPort}}"
+					],
+					"path": [
+						"api",
+						"videos"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Atualizar Video",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "name",
+							"value": "Nikon Coolpix P900 83x optical super zoom alpinist test in a wolrd record",
+							"type": "text"
+						},
+						{
+							"key": "video_url",
+							"value": "https://www.youtube.com/watch?v=FiGyN_S60lQ",
+							"type": "text"
+						},
+						{
+							"key": "imagem",
+							"value": "",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://{{serverHostAndPort}}/api/videos/1",
+					"protocol": "http",
+					"host": [
+						"{{serverHostAndPort}}"
+					],
+					"path": [
+						"api",
+						"videos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Excluir objeto de video",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://{{serverHostAndPort}}/api/videos/4",
+					"protocol": "http",
+					"host": [
+						"{{serverHostAndPort}}"
+					],
+					"path": [
+						"api",
+						"videos",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Show video object",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://{{serverHostAndPort}}/api/videos/1",
+					"protocol": "http",
+					"host": [
+						"{{serverHostAndPort}}"
+					],
+					"path": [
+						"api",
+						"videos",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "f4b1f13a-26dd-4806-9ea1-32928a987ee4",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "66d1f9ad-caa2-441e-b862-1b4f17004b2c",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"id": "503d0c79-023b-4475-8d65-92764ecf5cdb",
+			"key": "serverHostAndPort",
+			"value": "127.0.0.1:8000"
+		}
+	],
+	"protocolProfileBehavior": {}
+}
