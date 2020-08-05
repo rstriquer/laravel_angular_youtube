@@ -1,0 +1,40 @@
+<!-- form class="form" (submit)="add(videoName.value); videoName.value=''">
+    <div class="form-group">
+        <input #videoName type="text" class="form-control" placeholder="Video Name">
+    </div>
+    <input type="submit" value="SUBMIT" class="btn btn-sucess btn-lg btn-block">
+</form -->
+
+<div *ngFor="let video of videos" class="video_box">
+    <div class="video_title">
+        {{video.name}}
+    </div>
+    <div class="video_menu">
+        <li class="fa fa-bars"></li>
+    </div>
+    <div class="video_innerbox">
+        <img src="https://img.youtube.com/vi/{{video.video_url}}/0.jpg" alt="{{video.name}}" class="video_thumbnail" data-toggle="modal" data-target="#myModal" (click)="playVideo(video)" />
+        <div class="play-btn"><i class="fa fa-youtube"></i></div>
+        <!-- div class="video_thumbnail">{{video.video_url}}</div -->
+    </div>
+</div>
+
+<!-- table class="table">
+    <tr *ngFor="let video of videos">
+        <td class="text-left">
+            <a (click)="edit(video)">
+                <span *ngIf="video!==editVideo" >{{video.Name}}</span>
+                <input *ngIf="video===editVideo" [(ngModel)]="video.name" (blur)="update()" (keyup.enter)="update()" />
+            </a>
+        </td>
+        <td class="text-right">
+            <button class="btn btn-dangerr" (click)="delete(video)">
+                Delete
+            </button>
+        </td>
+    </tr>
+</table>
+
+<div class="card card-body bg-light text-center">
+    <span class="small">click on item to edit</span>
+</div -->
